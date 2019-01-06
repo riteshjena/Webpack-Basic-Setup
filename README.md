@@ -1,2 +1,2 @@
 # Webpack-Basic-Setup
-A basic setup of Webpack 4
+A basic setup of Webpack with HMR
