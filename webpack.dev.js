@@ -1,9 +1,9 @@
-const merge = require('webpack-merge')
-const common = require('./webpack.common.js')
+const merge = require('webpack-merge');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
   mode: 'development',
-  watch: true,
   devtool: 'source-map',
   module: {
     rules: [
@@ -13,4 +13,10 @@ module.exports = merge(common, {
       }
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      filename: 'index.html'
+    })
+  ]
 });
